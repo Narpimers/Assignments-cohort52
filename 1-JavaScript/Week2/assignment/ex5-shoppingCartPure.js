@@ -14,9 +14,18 @@ it pure. Do the following:
    spread syntax.
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
+
+import { readBuilderProgram } from 'typescript';
+
 // ! Function under test
-function addToShoppingCart(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function addToShoppingCart(shoppingCart, groceryItem) {
+  newShoppingCart = [...shoppingCart, groceryItem];
+  if (newShoppingCart.length <= 3) {
+    return newShoppingCart;
+  } else {
+    newShoppingCart.shift();
+    return newShoppingCart;
+  }
 }
 
 // ! Test functions (plain vanilla JavaScript)

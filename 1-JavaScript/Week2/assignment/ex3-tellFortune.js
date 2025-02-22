@@ -3,6 +3,7 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-J
 
 Why pay a fortune teller when you can just program your fortune yourself?
 
+
 1. Create four arrays, `numKids`, `partnerNames`, `locations` and `jobTitles`. 
    Give each array five random values that have to do with the name of 
    the variable.
@@ -32,30 +33,27 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+//const numKids = [0, 1, 2, 3, 4, 5];
+// const partnerNames = ['Joost', 'Nour', 'Els', 'Ilia', 'Nobody'];
+// const locations = ['Amsterdam', 'Bali', 'Chine', 'Paris', 'Lesabon'];
+// const jobTitles = ['Manager', 'WebDev', 'Workless', 'Homeless', 'Boss'];
+
+function selectRandomly(whatAbout) {
+  return whatAbout[Math.floor(Math.random() * whatAbout.length)];
 }
 
-export function tellFortune(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+export function tellFortune(kids, partner, location, title) {
+  return `You will be a ${selectRandomly(title)} in ${selectRandomly(location)}, married to ${selectRandomly(partner)} with ${selectRandomly(kids)} kids.`;
 }
 
 function main() {
-  const numKids = [
-    // TODO add elements here
-  ];
+  const numKids = [0, 1, 2, 3, 4];
 
-  const partnerNames = [
-    // TODO add elements here
-  ];
+  const partnerNames = ['Ilia', 'Nour', 'Els', 'Tom', 'Nobody'];
 
-  const locations = [
-    // TODO add elements here
-  ];
+  const locations = ['Amsterdam', 'Bali', 'China', 'Paris', 'Lisbon'];
 
-  const jobTitles = [
-    // TODO add elements here
-  ];
+  const jobTitles = ['Manager', 'WebDev', 'Workless', 'Homeless', 'Boss'];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
