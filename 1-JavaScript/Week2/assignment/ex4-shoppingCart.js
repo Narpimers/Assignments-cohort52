@@ -20,18 +20,15 @@ const shoppingCart = ['bananas', 'milk'];
 
 // ! Function to be tested
 function addToShoppingCart(item) {
-  if (item == undefined) {
-    return `You bought ${shoppingCart.join(', ')}!`;
-  } else {
+  if (item) {
     shoppingCart.push(item);
   }
   if (shoppingCart.length > 3) {
     shoppingCart.shift();
-    return `You bought ${shoppingCart.join(', ')}!`;
-  } else {
-    return `You bought ${shoppingCart.join(', ')}!`;
   }
-}
+
+  return `You bought ${shoppingCart.join(', ')}!`;
+};
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {

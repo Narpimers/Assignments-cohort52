@@ -19,7 +19,7 @@ import { readBuilderProgram } from 'typescript';
 
 // ! Function under test
 function addToShoppingCart(shoppingCart, groceryItem) {
-  newShoppingCart = [...shoppingCart, groceryItem];
+  let newShoppingCart = [...shoppingCart, groceryItem];
   if (newShoppingCart.length <= 3) {
     return newShoppingCart;
   } else {
