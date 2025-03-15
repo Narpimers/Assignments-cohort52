@@ -1,1 +1,13 @@
 /* Write your style here */
+li {
+    display: inline-block; 
+    width: 400px;
+    margin: 8px;
+    padding: 8px;
+    margin-left: 2rem;
+    background-color: green;
+}
+
+.needRead {
+ background-color: red;
+}

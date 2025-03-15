@@ -1,0 +1,20 @@
+*** Unit Test Error Report ***
+
+(node:17104) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ PASS  .dist/2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js (5.654 s)
+  br-wk1-ex4-whatsTheTime
+    ✅ HTML should be syntactically valid (111 ms)
+    ✅ should have all TODO comments removed (1 ms)
+    ✅ should use `setInterval()`
+    ✅ should not call `setInterval()` more than once (2011 ms)
+    ✅ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✅ `window.onload` or `window.addEventListener` should not call its event handler function
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        6.189 s
+Ran all test suites matching /C:\\Users\\Shnek\\hackyourfuture\\Assignments-cohort52\\.dist\\2-Browsers\\Week1\\unit-tests\\ex4-whatsTheTime.test.js/i.
+No linting errors detected.
+No spelling errors detected.
