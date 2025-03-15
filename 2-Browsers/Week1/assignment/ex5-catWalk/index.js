@@ -25,7 +25,6 @@ const body = document.querySelector('body');
 let bodyWidth = body.offsetWidth;
 let hasChanged = false;
 catImg.style.left = "0px";
-window.addEventListener('DOMContentLoaded',
 function catWalk() {
    // make cat moving to left
     let leftPx = parseInt(catImg.style.left, 10);
@@ -46,6 +45,8 @@ function catWalk() {
             hasChanged = false;
         }, 5000);
     };
-});
+};
 
-setInterval(catWalk, 50);
+window.addEventListener('DOMContentLoaded', function () {
+   setInterval(catWalk, 50); 
+});
