@@ -22,11 +22,9 @@ function createBookList(books) {
   books.forEach(book => {
     const newParagraph = document.createElement('p');
     newParagraph.textContent = `Author: ${book.author}, Title: ${book.title}`;
-    // <li> author and Title </li>
     let newLiList =  document.createElement('li');
     newLiList.appendChild(newParagraph)
     newUlList.appendChild(newLiList);
-   // <img> </img>
    const newImg = document.createElement('img');
    let imgName = book.title.toLowerCase().replace(/ /g, '_');
    newImg.src = `./assets/${imgName}.jpg`; 
