@@ -20,39 +20,58 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-const catImg = document.querySelector('img');
-const body = document.querySelector('body');
-let bodyWidth = body.offsetWidth;
-let hasChanged = false;
-catImg.style.left = "0px";
+// const cat = document.querySelector("img");
+// const stopPos = window.innerWidth;
+// const startPos = -cat.width;
+// const dancingPos = (window.innerWidth - cat.width)/2;
+// cat.style.left = startPos+"px";
+// function catWalk() {
+//    pos = cat.style.left + 10 + "px";
+//    cat.style.left = parseInt(pos.split("px")[0]) + 10 + "px"
+//    console.log(pos.split("px")[0]);
+//    console.log(parseInt(pos.split("px")[0]));
+// }
+// cat.style.left = parseInt(img.style.left) + 10 + "px";
+// console.log(cat.style.left);
+
+// const catWalkInterval = setInterval(catWalk, 100)
+
+const cat = document.querySelector("img");
+const danceStop = (window.innerWidth - cat.width) / 2;
+const end = window.innerWidth;
+const originalSrc = cat.src;
+
+  
+
+
+function catWalk() { 
+   let hasDanced = false;
+   let catPosition = -cat.width;
+   const main = () => { 
+      const catWalkingInterval = setInterval(() => {
+         catPosition += 10;
+         cat.style.left = `${catPosition}px`;
+
+         if (catPosition >= danceStop && !hasDanced) {
+            cat.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
+            hasDanced = true;
+            clearInterval(catWalkingInterval);
+
+            setTimeout(() => {
+               cat.src = originalSrc;
+               main();
+            }, 5000);
+         }; 
+         if (catPosition > end) {
+            catPosition = -cat.width;
+            hasDanced = false;
+         } 
+         
+      }, 50);
+      };
+   main();
+
+   
+ };
+ window.addEventListener('load', catWalk)
  
-function catWalk() {
- // make cat moving to left
-   let leftPx = parseInt(catImg.style.left, 10); 
-   catImg.style.left = `${leftPx+10}px`;
-
-  //Make cat dance
-   if (leftPx >= bodyWidth / 2 && !hasChanged) {
-      catImg.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif";
-      hasChanged = true;
-      setTimeout(() => {
-         catImg.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif";
-         hasChanged = false;
-      }, 5000);
-   };
-
-        //reset cat passion 
-   if (leftPx > bodyWidth - catImg.offsetWidth ) {
-      catImg.style.left = "0px"; 
-   };
-   
-};
-
-
-window.addEventListener('DOMContentLoaded', function () {
-   const catWalkingInterval = setInterval(catWalk, 100);
-   if (parseInt(catImg.style.left, 10) === bodyWidth / 2) {
-      clearInterval(catWalkingInterval)
-   }
-   
-});
