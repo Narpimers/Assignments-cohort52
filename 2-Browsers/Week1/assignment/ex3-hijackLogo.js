@@ -7,14 +7,7 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
    HackYourFuture logo instead.
 ------------------------------------------------------------------------------*/
 function hijackGoogleLogo() {
-   let allImg = document.querySelectorAll('img');
-   allImg.forEach(img => {
-    if (img.className === "lnXdpd") {
-       img.src="https://raw.githubusercontent.com/HackYourFuture/Assignments/refs/heads/main/assets/hyf-logo-black-bg-small.png";
-       img.srcset="https://raw.githubusercontent.com/HackYourFuture/Assignments/refs/heads/main/assets/hyf-logo-black-bg-small.png";  
-    }});
- 
- }
- 
- hijackGoogleLogo();
+  // TODO your code goes in here
+}
 
+hijackGoogleLogo();

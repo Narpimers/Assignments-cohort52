@@ -27,10 +27,12 @@ exercise file.
 import { rollDie } from '../../helpers/pokerDiceRoller.js';
 
 export function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
-}
+  const diceArray = dice.map((dice) => {
+    return rollDie(dice);
+  });
+  return Promise.all(diceArray);;
+};
 
 function main() {
   rollDice()
@@ -43,4 +45,5 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 
-// TODO Replace this comment by your explanation that was asked for in the assignment description.
+// Because Promise.all waits until all the "promises" are fulfilled and only then will it produce a result. 
+// Here's a lesson: don't make promises that you can't keep.

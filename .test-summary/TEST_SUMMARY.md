@@ -2,12 +2,12 @@
 
 **Mentors**: For more information on how to review homework assignments, please refer to the [Review Guide](https://github.com/HackYourFuture/mentors/blob/main/assignment-support/review-guide.md).
 
-### 2-Browsers - Week1
+### 3-UsingAPIs - Week1
 
-|     Exercise     | Passed | Failed | ESLint |
-|------------------|--------|--------|--------|
-| ex1-bookList     |   6    |   -    |   ✓    |
-| ex2-aboutMe      |   4    |   -    |   ✓    |
-| ex3-hijackLogo   |   3    |   -    |   ✓    |
-| ex4-whatsTheTime |   6    |   -    |   ✓    |
-| ex5-catWalk      |   5    |   -    |   ✓    |
+|       Exercise        | Passed | Failed | ESLint |
+|-----------------------|--------|--------|--------|
+| ex1-johnWho           |   9    |   -    |   ✓    |
+| ex2-checkDoubleDigits |   11   |   -    |   ✓    |
+| ex3-rollDie           |   7    |   -    |   ✓    |
+| ex4-pokerDiceAll      |   7    |   -    |   ✓    |
+| ex5-pokerDiceChain    |   5    |   -    |   ✓    |

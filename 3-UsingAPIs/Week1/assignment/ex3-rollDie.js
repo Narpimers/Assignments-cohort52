@@ -7,38 +7,33 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/3-U
 - Change the calls to `callback()` to calls to `resolve()` and `reject()`.
 - Refactor the code that call `rollDie()` to use the promise it returns.
 - Does the problem described above still occur? If not, what would be your
-  explanation? Add your answer as a comment to be bottom of the file.
+  explanation? Add your answer as a comment to be bottom of the file.ё
 ------------------------------------------------------------------------------*/
 
 export function rollDie() {
 
   return new Promise ((resolve, reject) => {
     // Compute a random number of rolls (3-10) that the die MUST complete
-    const randomRollsToDo = Math.floor(Math.random() * 8) + 3;
+    const randomRollsToDo = Math.floor(Math.random() * 8) + 3; 6
     console.log(`Die scheduled for ${randomRollsToDo} rolls...`);
     
     const rollOnce = (roll) => {
-      // Compute a random die value for the current roll
       const value = Math.floor(Math.random() * 6) + 1;
       console.log(`Die value is now: ${value}`);
   
-      // Use callback to notify that the die rolled off the table after 6 rolls
       if (roll > 6) {
-        reject(new Error('Oops... Die rolled off the table.'))
+       return reject(new Error('Oops... Die rolled off the table.'))
       }
   
-      // Use callback to communicate the final die value once finished rolling
       if (roll === randomRollsToDo) {
-        resolve(value)
+        return resolve(value)
       }
-  
-      // Schedule the next roll todo until no more rolls to do
+
       if (roll < randomRollsToDo) {
         setTimeout(() => rollOnce(roll + 1), 500);
       }
     };
-  
-    // Start the initial roll
+
     rollOnce(1);
   })
 }
@@ -54,3 +49,5 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 
+// In a promise, if there is a reject, it cannot be resolved, and vice versa. If there is a resolve, there cannot be a reject. 
+// There is no such limitation with callbacks.
