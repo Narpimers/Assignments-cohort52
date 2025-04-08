@@ -5,15 +5,15 @@
     ✅ should exist and be executable (2 ms)
     ✅ should have all TODO comments removed
     ✅ should call `new Promise()`
-    ✅ `resolve()` should be called with a one argument (1 ms)
-    ✅ `reject()` should be called with a one argument
+    ✅ `resolve()` should be called with a one argument
+    ✅ `reject()` should be called with a one argument (1 ms)
     ✅ should resolve when the die settles successfully (1 ms)
-    ✅ should reject with an Error when the die rolls off the table (1 ms)
+    ✅ should reject with an Error when the die rolls off the table
 
 Test Suites: 1 passed, 1 total
 Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        0.601 s, estimated 1 s
+Time:        0.812 s, estimated 1 s
 Ran all test suites matching /C:\\Users\\Shnek\\hackyourfuture\\Assignments-cohort52\\.dist\\3-UsingAPIs\\Week1\\unit-tests\\ex3-rollDie.test.js/i.
 No linting errors detected.
 No spelling errors detected.
