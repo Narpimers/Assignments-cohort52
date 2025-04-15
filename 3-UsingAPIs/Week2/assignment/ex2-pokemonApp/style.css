@@ -1,1 +1,35 @@
 /* add your styling here */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(229, 228, 227);
+    
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+select {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: transform 0.2s ease; /* плавный эффект */
+  }
+  
+  button:hover {
+    transform: scale(1.1); /* увеличивает кнопку на 10% */
+  }
