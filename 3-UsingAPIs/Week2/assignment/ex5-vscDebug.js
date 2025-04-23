@@ -9,10 +9,10 @@ async function getData(url) {
 }
 
 function renderLaureate({ knownName, birth, death }) {
-  console.log(`\nName: ${knownName.en}`);
-  console.log(`Birth: ${birth.date}, ${birth.place.locationString}`);
+  console.log(`Name: ${knownName.en}`);
+  console.log(`Birth: ${birth.date}, ${birth.place.locationString.en}`);
   if (death) {
-    console.log(`Death: ${death.date}, ${death.place.locationString}`);
+    console.log(`Death: ${death.date}, ${death.place.locationString.en}`);
   }
 }
 

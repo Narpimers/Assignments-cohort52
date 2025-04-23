@@ -15,7 +15,7 @@ import { rollDie } from '../../helpers/pokerDiceRoller.js';
 
 export function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  const allPromises =  dice.map((element) => rollDie(element));
+  const allPromises =  dice.map(rollDie);
   return Promise.race(allPromises);
 }
 
@@ -34,6 +34,6 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 
-// Because there is a setTimeout in the rollout, and the request goes into a queue, 
-// the app already knows what the answer will be while the setTimeout is still running.
-//  So it shows the result, but the text continues to appear because the request is still in the queue.
+//Promise.race() takes all 5 promises and returns one promise that settles as soon as the first of the 5 settles. 
+// However, even if Promise.race() has already returned a result, the remaining promises will still continue to settle.
+// This means that although you get the result from the first settled promise, the other promises will keep running and finishing on their own.
